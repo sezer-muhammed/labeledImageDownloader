@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 import glob
 
-paths = glob.glob("S:/sDepo/foto-uret/OIDv4_ToolKit/OID/Dataset/train/*/*.jpg")
-
+paths = glob.glob("-----------/OIDv4_ToolKit/OID/Dataset/train/*/*.jpg")
+# change this path
 a = 0
 fotolar = []
 for pat in paths:
@@ -41,7 +41,7 @@ for pat in paths:
                     cv2.rectangle(foto, (xMin, yMin), (xMax, yMax), (0, 0,  255), 2)
                     isim = ""
                     for kel in range(kelime):
-                        isim = isim + final[kel] + " "
+                        isim = isim + final[kel]
                     print(isim)
                     file.write("	<object>\n")
                     file.write("		<name>"+isim+"</name>\n")
